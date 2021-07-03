@@ -20,6 +20,16 @@ describe('Tickets', () => {
     it("select 'vip' ticket type", () => {
         cy.get("#vip").check();
     });
+
+    it("selects 'social media' checkbox", () => {
+        cy.get("#social-media").check();
+    });
+
+    it("selects 'friend', and 'publication', then uncheck 'friend'", () => {
+        cy.get("#friend").check();
+        cy.get("#publication").check();
+        cy.get("#publication").uncheck();
+    });
     it("has 'TICKETBOX' header's heading", () => {
         
     });
