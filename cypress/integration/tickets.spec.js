@@ -5,11 +5,16 @@ describe('Tickets', () => {
     it("fills all the text input fields", () => {
         const firstName = "Davison";
         const lastName = "Silva";
+
         cy.get("#first-name").type(firstName);
         cy.get("#last-name").type(lastName);
         cy.get("#email").type("davison@email.com");
         cy.get("#requests").type("Vegetariano");
         cy.get("#signature").type(`${firstName} ${lastName}`);
+    });
+
+    it("select two tickets", () => {
+        cy.get("#ticket-quantity").select("2");
     });
     it("has 'TICKETBOX' header's heading", () => {
         
